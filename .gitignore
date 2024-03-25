@@ -1,52 +1,66 @@
-# Prerequisites
-*.d
+# Created by https://www.toptal.com/developers/gitignore/api/eclipse
+# Edit at https://www.toptal.com/developers/gitignore?templates=eclipse
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+### Eclipse ###
 
-# Linker output
-*.ilk
-*.map
-*.exp
+Debug/
 
-# Precompiled Headers
-*.gch
-*.pch
+.metadata
+#bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# External tool builders
+.externalToolBuilders/
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# Locally stored "Eclipse launch configurations"
+*.launch
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# CDT-specific (C/C++ Development Tooling)
+#.cproject
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# CDT- autotools
+.autotools
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Code Recommenders
+.recommenders/
+
+# Annotation Processing
+.apt_generated/
+.apt_generated_test/
+
+
+# Uncomment this line if you wish to ignore the project description file.
+# Typically, this file would be tracked if it contains build/dependency configurations:
+#.project
+
+
+# End of https://www.toptal.com/developers/gitignore/api/eclipse
+
+
+# Ignore list for KiCAD Projects
+# Temporary files
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.sch-bak
+*~
+_autosave-*
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache
+# Netlist files (exported from Eeschema)
+*.net
+# Autorouter files (exported from Pcbnew)
+*.dsn
+*.ses
+
