@@ -53,6 +53,10 @@
 	#define VDS_OVERCURRENT		0x04			/**< 0x04 0.31V
 	 	 	 	 	 	 	 	 	 	 	 	 	 2.1mOhm*1.8*100A = 0.38V */
 
+	#define CONFIG_IQ_MAX		100.0f			/**< Iq max allowed */
+	#define CONFIG_TEMPERATURE_MAX 125.0f			/**< Temperature max allowed */
+
+
 #elif (DRV_VERSION == 4U)
 
 	/* I_A_RAW = (ADC_Value-Neutral) * ADC_GAININV */
@@ -62,6 +66,9 @@
 	#define IDRIVE_CURRENT		0x02			/**< 0x01 60mA/120mA */
 	#define VDS_OVERCURRENT		0x04			/**< 0x04 0.31V
 	 	 	 	 	 	 	 	 	 	 	 	 	 0.91mOhm*1.8*200A = 0.33V */
+	#define CONFIG_IQ_MAX		200.0f			/**< Iq max allowed */
+	#define CONFIG_TEMPERATURE_MAX 2048.0f			/**< Temperature max allowed */
+
 #else
 	#error "DRV_VERSION define error!"
 #endif
@@ -216,12 +223,15 @@
 
 /** Firmware version
  *  00|5bit Year|4bit Month|5bit Day */
-//#define FW_VERSION	 0x0449
+//#define FW_VERSION	 0x0581
 #ifndef FW_VERSION
 #define FW_VERSION	 ( (((BUILD_YEAR-20)&0x1F)<<9) + \
 						((BUILD_MONTH & 0x0F)<<5) + \
 						 (BUILD_DAY & 0x1F) )			
 #endif
+
+
+//#warning "Firmware version: " FW_VERSION
 
 /**
  * @}

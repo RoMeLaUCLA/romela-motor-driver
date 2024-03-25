@@ -20,6 +20,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "Config.h"
@@ -685,6 +686,8 @@ static void MX_TIM1_Init(void)
   TIM_BreakDeadTimeConfigTypeDef sBreakDeadTimeConfig = {0};
 
   /* USER CODE BEGIN TIM1_Init 1 */
+
+  /***** Begin Modified TIM1 init code to change pwm frequency *****/
   htim1.Instance = TIM1;
   htim1.Init.Prescaler = 0;
   htim1.Init.CounterMode = TIM_COUNTERMODE_CENTERALIGNED1;
@@ -752,10 +755,9 @@ static void MX_TIM1_Init(void)
   {
     Error_Handler();
   }
-  HAL_TIM_MspPostInit(&htim1);
 
-  return;
-  /***** Modified TIM1 init code to change pwm frequency *****/
+  /***** End Modified TIM1 init code to change pwm frequency *****/
+#if 0
 
   /* USER CODE END TIM1_Init 1 */
   htim1.Instance = TIM1;
@@ -826,6 +828,7 @@ static void MX_TIM1_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN TIM1_Init 2 */
+#endif
 
   /* USER CODE END TIM1_Init 2 */
   HAL_TIM_MspPostInit(&htim1);

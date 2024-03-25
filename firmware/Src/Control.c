@@ -45,6 +45,8 @@ float32_t IIR_Posi_ref_State[4];			/**< IIR states for reference position */
 //arm_biquad_casd_df1_inst_f32 IIR_TempTC;
 //float32_t IIR_TempTC_State[4];
 
+float32_t JointLimitP = 1000;
+
 /* private function */
 void Debug_Terminal();
 static inline void ADC_Debug();
@@ -321,6 +323,8 @@ void Ctrl_Init()
 	AFC_Init(&Motor1.afc_Iq_2, AFC_HARMONIC2, AFC_K, AFC_MAX);
 	AFC_Init(&Motor1.afc_Id_1, AFC_HARMONIC1, AFC_K, AFC_MAX);
 
+
+	JointLimitP = Config_Active.P_DirectF;
 }
 
 
@@ -455,6 +459,12 @@ void ADC_Routine()
 	#error "Main Encoder definition invalid!"
 #endif
 
+#ifdef MOTOR_U180_HMND	/*** U180_HMND ARTEMIS ***/
+
+		Motor1.I_q_Ref = coerce(Motor1.I_q_Ref, JointLimitP * abs(Motor1.Rtr_Theta - Config_Active.Posi_Min) );
+		Motor1.I_q_Ref = coerce(Motor1.I_q_Ref, JointLimitP * abs(Motor1.Rtr_Theta - Config_Active.Posi_Max) );
+
+#endif
 	/*** Calculate PWM outputs ***/
 	Motor_CalculateOutput(&Motor1);
 
@@ -1007,7 +1017,7 @@ static inline void Ctrl_Debug()
 		(*Debug_Data_f)[11] = Motor1.ThetaDot_Ref;	//Rtr_Theta_Dot_LP_aggr;//
 
 		(*Debug_Data_f)[12] = Motor1.Ext_Theta;
-		(*Debug_Data_f)[13] = Mode.Vbus_LowPass;//Vbus_RAW;	//LowPass;
+		(*Debug_Data_f)[13] = Mode.Vbus_RAW;	//LowPass;
 
 		if (Mode.Manual_E_Theta)
 		{

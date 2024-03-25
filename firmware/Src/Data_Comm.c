@@ -583,6 +583,10 @@ void UART_Debug_Routine(void)
 
 		break;
 
+	case 0x0D: //HAL_DeInit
+		HAL_DeInit();
+		break;
+
 	case 0x0E: //reset stm32
 		NVIC_SystemReset();
 		break;

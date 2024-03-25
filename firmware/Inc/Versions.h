@@ -13,15 +13,16 @@
  */
 //#define MOTOR_KB01_R18  	/**< 0x01 KB01 (4006 with Ext AS5047) */
 //#define MOTOR_KB01_R24  	/**< 0x02 KB01 (4006 with Ext AS5047) */
-#define MOTOR_U54			/**< 0x03 KB02 (U54) */
+//#define MOTOR_U54			/**< 0x03 KB02 (U54) */
 //#define MOTOR_U5412_R19  	/**< 0x04 KBMB00 (U5412 R19) */
 //#define MOTOR_U5412_R20  	/**< 0x05 KBMB00 (U5412 R20) */
 //#define MOTOR_U8			/**< 0x09 U8 (rev2) */
 //#define MOTOR_U98			/**< 0x0A PB02&PB02P (U98) */
-//#define MOTOR_U180_HMND 	/**< 0x20 U180 ARTEMIS */
+#define MOTOR_U180_HMND 	/**< 0x20 U180 ARTEMIS */
 //#define MOTOR_U10P_HMND 	/**< 0x21 U10Plus ARTEMIS */
 //#define MOTOR_4006_HMND 	/**< 0x22 4006 ARTEMIS */
 //#define MOTOR_U5412_HMND	/**< 0x23 U5412/KBMB00 ARTEMIS */
+//#define MOTOR_U5412_R20_HMND	/**< 0x24 U5412/KBMB00 R20 ARTEMIS */
 //#define MOTOR_U54_HMND  	/**< 0x03 U54/KB02 ARTEMIS */
 /**
  * @}
@@ -236,6 +237,25 @@
 
 	/* Main Encoder */
 	#define MHM_PV_MULTITURN	
+	#define RTR_ENC_RES			65536
+	#define RTR_ENC_RES_BIT		(16U)
+	/* Ext Encoder */
+	#define EXT_ENC_RES			1//No Ext Encoder
+
+	#define AFC_HARMONIC2		2.0f
+
+#endif
+#ifdef MOTOR_U5412_R20_HMND	/*** U5412/KBMB00 R20 ARTEMIS ***/
+	#define DRV_VERSION			3U		/**< Driver board version Gen2.0 */
+	#define HW_VERSION			0x24	/**< motor hardware model */
+	#define POLE_PAIR			20
+	#define REDUCTION_RATIO		20.0f
+
+	#define DEFAULT_KP			0.358f
+	#define DEFAULT_KI			0.077f
+
+	/* Main Encoder */
+	#define MHM_PV_MULTITURN
 	#define RTR_ENC_RES			65536
 	#define RTR_ENC_RES_BIT		(16U)
 	/* Ext Encoder */

@@ -89,15 +89,15 @@ static const Motor_Config_TypeDef Config_Max =
 	10000.0f,	//	float32_t	D_DirectF;
 	//	
 	10000.0f,	//	float32_t	Acc_Max;
-	100.0f,		//	float32_t	I_Max;
+	CONFIG_IQ_MAX,	//	float32_t	I_Max;
 	10000.0f,	//	float32_t	Velo_Max;
 	THETA_MAX_F,//	float32_t	Posi_Min;
 	THETA_MAX_F,//	float32_t	Posi_Max;
 	MAX_VBUS,	//	float32_t	Vbus_Min;
 	MAX_VBUS,	//	float32_t	Vbus_Max;
 	10000000,	//	uint32_t	Watchdog_Timeout;
-	125.0f,		//	float32_t	Temp_Min;
-	125.0f,		//	float32_t	Temp_Max;
+	CONFIG_TEMPERATURE_MAX,		//	float32_t	Temp_Min;
+	CONFIG_TEMPERATURE_MAX,		//	float32_t	Temp_Max;
 	0			//	int32_t		Rtr_MT_Offset;
 };
 /** defaults for configurations */
