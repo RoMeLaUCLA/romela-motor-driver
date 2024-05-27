@@ -45,7 +45,8 @@ float32_t IIR_Posi_ref_State[4];			/**< IIR states for reference position */
 //arm_biquad_casd_df1_inst_f32 IIR_TempTC;
 //float32_t IIR_TempTC_State[4];
 
-float32_t JointLimitP = 1000;
+float32_t JointLimitP = 200;		//P gain for joint limit
+float32_t JointLimitOffset = 0.1;	//offset for joint limit
 
 /* private function */
 void Debug_Terminal();
@@ -324,7 +325,7 @@ void Ctrl_Init()
 	AFC_Init(&Motor1.afc_Id_1, AFC_HARMONIC1, AFC_K, AFC_MAX);
 
 
-	JointLimitP = Config_Active.P_DirectF;
+//	JointLimitP = Config_Active.P_DirectF;	// using Direct force P gain for joint limit P gain
 }
 
 
@@ -461,8 +462,26 @@ void ADC_Routine()
 
 #ifdef MOTOR_U180_HMND	/*** U180_HMND ARTEMIS ***/
 
-		Motor1.I_q_Ref = coerce(Motor1.I_q_Ref, JointLimitP * abs(Motor1.Rtr_Theta - Config_Active.Posi_Min) );
-		Motor1.I_q_Ref = coerce(Motor1.I_q_Ref, JointLimitP * abs(Motor1.Rtr_Theta - Config_Active.Posi_Max) );
+	/*** limit torque output when close to joint limit ***/
+	// coerce(data,limit) ((data) > 0 ? (min(data,limit)) : (max(data,-limit)))
+
+	if (Motor1.I_q_Ref > 0)
+	{
+		//limit +tq when close to +joint limit
+		Motor1.I_q_Ref = max(0,
+						 min(Motor1.I_q_Ref, JointLimitP * (Config_Active.Posi_Max - JointLimitOffset - Motor1.Rtr_Theta)) );
+	}
+	else
+	{
+		//limit -tq when close to -joint limit
+		Motor1.I_q_Ref = min(0,
+						 max(Motor1.I_q_Ref, JointLimitP * (Config_Active.Posi_Min + JointLimitOffset - Motor1.Rtr_Theta)) );
+	}
+
+//		Motor1.I_q_Ref = coerce(Motor1.I_q_Ref,
+//								JointLimitP * abs(Motor1.Rtr_Theta - Config_Active.Posi_Min) );
+//		Motor1.I_q_Ref = coerce(Motor1.I_q_Ref,
+//								JointLimitP * abs(Motor1.Rtr_Theta - Config_Active.Posi_Max) );
 
 #endif
 	/*** Calculate PWM outputs ***/
