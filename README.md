@@ -1,6 +1,9 @@
 # RoMeLa motor driver gen2
  Motor driver PCB and firmware designed for RoMeLa actuators. 
  
+ Block diagram of the hardware:
+ 
+ <img src="/docs/driver_diagram.jpg" width="400">
 
  # PCB reference
 
