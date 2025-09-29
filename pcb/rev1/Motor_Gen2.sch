@@ -111,7 +111,7 @@ F6 "BATT+" I L 2950 3250 60
 F7 "BATT-" I L 2950 3550 60 
 $EndSheet
 $Comp
-L Device:R_Small R1
+L Motor_Gen2-rescue:R_Small-Device R1
 U 1 1 58299209
 P 2400 1650
 F 0 "R1" V 2300 1500 50  0000 L CNN
@@ -122,7 +122,7 @@ F 3 "" H 2400 1650 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GNDREF #PWR03
+L Motor_Gen2-rescue:GNDREF-power #PWR03
 U 1 1 5829962A
 P 2600 1650
 F 0 "#PWR03" H 2600 1400 50  0001 C CNN
@@ -133,7 +133,7 @@ F 3 "" H 2600 1650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 P6
+L Motor_Gen2-rescue:Conn_01x02-Connector_Generic P6
 U 1 1 582AC713
 P 2100 4300
 F 0 "P6" H 2100 4450 50  0000 C CNN
@@ -144,7 +144,7 @@ F 3 "" H 2100 4300 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:TestPoint P2
+L Motor_Gen2-rescue:TestPoint-Connector P2
 U 1 1 582AB0F8
 P 7900 2150
 F 0 "P2" V 7800 2300 50  0000 C CNN
@@ -155,7 +155,7 @@ F 3 "" H 8100 2150 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:TestPoint P3
+L Motor_Gen2-rescue:TestPoint-Connector P3
 U 1 1 582ABC63
 P 7900 2350
 F 0 "P3" V 7800 2500 50  0000 C CNN
@@ -166,7 +166,7 @@ F 3 "" H 8100 2350 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:TestPoint P4
+L Motor_Gen2-rescue:TestPoint-Connector P4
 U 1 1 582ABE29
 P 7900 2550
 F 0 "P4" V 7800 2700 50  0000 C CNN
@@ -253,7 +253,7 @@ Wire Wire Line
 Wire Wire Line
 	3950 4100 4450 4100
 $Comp
-L power:+48V #PWR01
+L Motor_Gen2-rescue:+48V-power #PWR01
 U 1 1 5832C1E8
 P 8900 1450
 F 0 "#PWR01" H 8900 1300 50  0001 C CNN
@@ -268,7 +268,7 @@ Wire Wire Line
 Wire Wire Line
 	8100 4450 7900 4450
 $Comp
-L power:GNDPWR #PWR02
+L Motor_Gen2-rescue:GNDPWR-power #PWR02
 U 1 1 5832E244
 P 8900 1550
 F 0 "#PWR02" H 8900 1350 50  0001 C CNN
@@ -285,7 +285,7 @@ Wire Wire Line
 Wire Wire Line
 	3950 2200 4450 2200
 $Comp
-L Connector_Generic:Conn_01x06 J2
+L Motor_Gen2-rescue:Conn_01x06-Connector_Generic J2
 U 1 1 5EA13651
 P 1450 2550
 F 0 "J2" H 1600 2250 50  0000 C CNN
@@ -296,7 +296,7 @@ F 3 "~" H 1450 2550 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x06 J1
+L Motor_Gen2-rescue:Conn_01x06-Connector_Generic J1
 U 1 1 5EA1E3F2
 P 1450 1850
 F 0 "J1" H 1600 1550 50  0000 C CNN
@@ -376,7 +376,7 @@ Wire Wire Line
 	2750 2200 2950 2200
 Connection ~ 2150 2450
 $Comp
-L Device:Battery_Cell BT1
+L Motor_Gen2-rescue:Battery_Cell-Device BT1
 U 1 1 5EA51518
 P 2250 3450
 F 0 "BT1" H 2050 3600 50  0000 L CNN
@@ -387,7 +387,7 @@ F 3 "~" V 2250 3510 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 P5
+L Motor_Gen2-rescue:Conn_01x02-Connector_Generic P5
 U 1 1 5EA52F07
 P 1450 3550
 F 0 "P5" H 1450 3700 50  0000 C CNN
@@ -412,7 +412,7 @@ Wire Wire Line
 	1800 3250 2250 3250
 Connection ~ 2250 3250
 $Comp
-L power:GNDPWR #PWR0113
+L Motor_Gen2-rescue:GNDPWR-power #PWR0113
 U 1 1 5E0E9B26
 P 2050 6300
 F 0 "#PWR0113" H 2050 6100 50  0001 C CNN
@@ -423,7 +423,7 @@ F 3 "" H 2050 6250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole_Pad H1
+L Motor_Gen2-rescue:MountingHole_Pad-Mechanical H1
 U 1 1 5E0FA87A
 P 2050 5600
 F 0 "H1" H 2150 5649 50  0000 L CNN
@@ -434,7 +434,7 @@ F 3 "~" H 2050 5600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint P1
+L Motor_Gen2-rescue:TestPoint-Connector P1
 U 1 1 5E2D6D9C
 P 8900 1450
 F 0 "P1" V 8850 1650 50  0000 C CNN
@@ -445,7 +445,7 @@ F 3 "" H 9100 1450 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector:TestPoint P11
+L Motor_Gen2-rescue:TestPoint-Connector P11
 U 1 1 5E2D7645
 P 8900 1550
 F 0 "P11" V 8950 1750 50  0000 C CNN
@@ -456,7 +456,7 @@ F 3 "" H 9100 1550 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Mechanical:MountingHole_Pad H2
+L Motor_Gen2-rescue:MountingHole_Pad-Mechanical H2
 U 1 1 5E2E12CF
 P 2350 5600
 F 0 "H2" H 2450 5649 50  0000 L CNN
@@ -467,7 +467,7 @@ F 3 "~" H 2350 5600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole_Pad H3
+L Motor_Gen2-rescue:MountingHole_Pad-Mechanical H3
 U 1 1 5E2E15B2
 P 2650 5600
 F 0 "H3" H 2750 5649 50  0000 L CNN
@@ -478,7 +478,7 @@ F 3 "~" H 2650 5600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole_Pad H4
+L Motor_Gen2-rescue:MountingHole_Pad-Mechanical H4
 U 1 1 5E2E1805
 P 2950 5600
 F 0 "H4" H 3050 5649 50  0000 L CNN
@@ -497,7 +497,7 @@ Wire Wire Line
 	2350 5700 2050 5700
 Connection ~ 2350 5700
 $Comp
-L Device:C_Small C?
+L Motor_Gen2-rescue:C_Small-Device C?
 U 1 1 5E2FC9E6
 P 2050 6000
 AR Path="/58280BEC/5E2FC9E6" Ref="C?"  Part="1" 
@@ -512,7 +512,7 @@ $EndComp
 Text Notes 2150 6200 0    60   ~ 0
 C0805W472KDRACTU
 $Comp
-L power:Earth_Protective #PWR0118
+L Motor_Gen2-rescue:Earth_Protective-power #PWR0118
 U 1 1 5E1D66A0
 P 2950 5700
 F 0 "#PWR0118" H 3200 5450 50  0001 C CNN
@@ -527,7 +527,7 @@ Wire Wire Line
 	2050 5700 2050 5900
 Connection ~ 2050 5700
 $Comp
-L Device:R R38
+L Motor_Gen2-rescue:R-Device R38
 U 1 1 5E1EE096
 P 1700 6000
 F 0 "R38" H 1770 6046 50  0000 L CNN
@@ -551,7 +551,7 @@ Wire Wire Line
 Wire Wire Line
 	2050 6100 2050 6250
 $Comp
-L power:+BATT #PWR0119
+L Motor_Gen2-rescue:+BATT-power #PWR0119
 U 1 1 5E22C2C9
 P 2250 3250
 F 0 "#PWR0119" H 2250 3100 50  0001 C CNN

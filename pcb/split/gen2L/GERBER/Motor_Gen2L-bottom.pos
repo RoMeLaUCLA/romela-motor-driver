@@ -1,0 +1,33 @@
+### Module positions - created on 10/27/22 19:37:49 ###
+### Printed by Pcbnew version kicad (5.1.10)-1
+## Unit = mm, Angle = deg.
+## Side : bottom
+# Ref     Val           Package                           PosX       PosY       Rot  Side
+C1        104           C_0402_1005Metric               1.5000     2.8000   90.0000  bottom
+C2        104           C_0402_1005Metric              13.8000    -7.8000  270.0000  bottom
+C3        104           C_0402_1005Metric               3.9000   -10.4000  270.0000  bottom
+C4        104           C_0402_1005Metric              15.3000     0.9000   90.0000  bottom
+C6        10uF          C_0805_2012Metric              15.7000    -5.8796  270.0000  bottom
+C16       104           C_0402_1005Metric              15.3000    -2.6000   90.0000  bottom
+C50       104           C_0402_1005Metric             -12.3000     3.5000   90.0000  bottom
+C51       103           C_0402_1005Metric             -13.9000     2.9000    0.0000  bottom
+C52       103           C_0402_1005Metric             -12.3000     1.4000  270.0000  bottom
+C53       103           C_0402_1005Metric             -13.9000    -0.1000  180.0000  bottom
+C61       22uF          C_1206_3216Metric             -19.0000    -4.1000   90.0000  bottom
+C62       104           C_0402_1005Metric             -16.4000    -3.2000    0.0000  bottom
+C63       104           C_0402_1005Metric             -18.4000   -13.8000  270.0000  bottom
+C64       22uF          C_1206_3216Metric             -19.0000   -10.7000   90.0000  bottom
+D6        TVS_3.3V      D_SOD-123F                     -6.1000   -11.1000   90.0000  bottom
+F1        Polyfuse      R_0603_1608Metric              -6.2000   -14.7000   90.0000  bottom
+FB1       Ferrite_Bead  R_0402_1005Metric             -13.9000     1.9000    0.0000  bottom
+FB2       Ferrite_Bead  R_0402_1005Metric             -13.9000     0.9000    0.0000  bottom
+R2        13k           R_0402_1005Metric               0.1000    -0.1000  270.0000  bottom
+R3        120*          R_0603_1608Metric              19.7750   -11.0734    0.0000  bottom
+R4        120*          R_0603_1608Metric              19.7750   -12.5734    0.0000  bottom
+R5        47            R_0603_1608Metric              19.7750   -14.0734    0.0000  bottom
+R25       3.9k          R_0402_1005Metric               6.3000   -10.8500  270.0000  bottom
+R26       3.9k          R_0402_1005Metric               7.3000   -10.8600  270.0000  bottom
+U1        446           LQFP-64_10x10mm_P0.5mm          7.7000    -2.4000  270.0000  bottom
+U9        MAX31855KASA  SOIC-8_3.9x4.9mm_P1.27mm       -7.9630     1.3890   -0.0000  bottom
+U14       ISOW7842F     SOIC-16W_7.5x10.3mm_P1.27mm   -12.5000    -9.8000  270.0000  bottom
+## End

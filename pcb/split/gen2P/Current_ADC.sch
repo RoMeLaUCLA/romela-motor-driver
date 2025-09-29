@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
-Sheet 4 7
-Title "RoMeLa Motor Gen2"
-Date "2020-04-20"
+Sheet 3 4
+Title "RoMeLa Motor Gen2 Power Board"
+Date "10/21/2022"
 Rev "1.0"
 Comp "Robotics & Mechanisms Labratory(RoMeLa) UCLA"
 Comment1 "Author: Tym Zhu"
@@ -22,7 +22,7 @@ CIN+
 Text HLabel 3100 4150 1    60   Input ~ 0
 CIN-
 $Comp
-L Motor_Gen2-rescue:GND-power #PWR052
+L Motor_Gen2P-rescue:GND-power #PWR052
 U 1 1 58293ED3
 P 1650 1350
 F 0 "#PWR052" H 1650 1100 50  0001 C CNN
@@ -33,7 +33,7 @@ F 3 "" H 1650 1350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:GNDA-power #PWR066
+L Motor_Gen2P-rescue:GNDA-power #PWR066
 U 1 1 58292232
 P 2800 3450
 F 0 "#PWR066" H 2800 3200 50  0001 C CNN
@@ -44,7 +44,7 @@ F 3 "" H 2800 3450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:GNDA-power #PWR051
+L Motor_Gen2P-rescue:GNDA-power #PWR051
 U 1 1 582922CB
 P 1000 1350
 F 0 "#PWR051" H 1000 1100 50  0001 C CNN
@@ -59,7 +59,7 @@ Wire Wire Line
 Wire Wire Line
 	1650 1250 1650 1350
 $Comp
-L Motor_Gen2-rescue:VDDA-power #PWR062
+L Motor_Gen2P-rescue:VDDA-power #PWR062
 U 1 1 5829350B
 P 2350 2950
 F 0 "#PWR062" H 2350 2800 50  0001 C CNN
@@ -70,7 +70,7 @@ F 3 "" H 2350 2950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:VDDA-power #PWR050
+L Motor_Gen2P-rescue:VDDA-power #PWR050
 U 1 1 5829359D
 P 3200 1050
 F 0 "#PWR050" H 3200 900 50  0001 C CNN
@@ -81,7 +81,7 @@ F 3 "" H 3200 1050 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:C_Small-Device C42
+L Motor_Gen2P-rescue:C_Small-Device C42
 U 1 1 58293685
 P 3350 3350
 F 0 "C42" H 3360 3420 50  0000 L CNN
@@ -92,40 +92,40 @@ F 3 "" H 3350 3350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:R_Small-Device R19
+L Motor_Gen2P-rescue:R_Small-Device R19
 U 1 1 58293EF2
 P 6450 3500
 F 0 "R19" V 6350 3500 50  0000 L CNN
-F 1 "10" V 6350 3400 50  0000 L CNN
+F 1 "33" V 6350 3400 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 6450 3500 50  0001 C CNN
 F 3 "" H 6450 3500 50  0000 C CNN
 	1    6450 3500
 	0    1    1    0   
 $EndComp
 $Comp
-L Motor_Gen2-rescue:R_Small-Device R20
+L Motor_Gen2P-rescue:R_Small-Device R20
 U 1 1 58293FB8
 P 6450 3700
 F 0 "R20" V 6350 3700 50  0000 L CNN
-F 1 "10" V 6350 3600 50  0000 L CNN
+F 1 "33" V 6350 3600 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 6450 3700 50  0001 C CNN
 F 3 "" H 6450 3700 50  0000 C CNN
 	1    6450 3700
 	0    1    1    0   
 $EndComp
 $Comp
-L Motor_Gen2-rescue:C_Small-Device C44
+L Motor_Gen2P-rescue:C_Small-Device C44
 U 1 1 58293FE7
 P 6650 3600
 F 0 "C44" H 6750 3650 50  0000 L CNN
-F 1 "1.5nF C0G" H 6750 3550 50  0000 L CNN
+F 1 "1nF C0G" H 6750 3550 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 6650 3600 50  0001 C CNN
 F 3 "" H 6650 3600 50  0000 C CNN
 	1    6650 3600
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:C_Small-Device C39
+L Motor_Gen2P-rescue:C_Small-Device C39
 U 1 1 582944C1
 P 8500 2900
 F 0 "C39" H 8510 2970 50  0000 L CNN
@@ -136,18 +136,7 @@ F 3 "" H 8500 2900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:C_Small-Device C37
-U 1 1 58294DE8
-P 6100 2550
-F 0 "C37" H 6110 2620 50  0000 L CNN
-F 1 "104" H 6110 2470 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 6100 2550 50  0001 C CNN
-F 3 "" H 6100 2550 50  0000 C CNN
-	1    6100 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Motor_Gen2-rescue:GNDA-power #PWR067
+L Motor_Gen2P-rescue:GNDA-power #PWR067
 U 1 1 582950CF
 P 3350 3450
 F 0 "#PWR067" H 3350 3200 50  0001 C CNN
@@ -158,7 +147,7 @@ F 3 "" H 3350 3450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:GNDA-power #PWR077
+L Motor_Gen2P-rescue:GNDA-power #PWR077
 U 1 1 582957DF
 P 2800 4950
 F 0 "#PWR077" H 2800 4700 50  0001 C CNN
@@ -169,7 +158,7 @@ F 3 "" H 2800 4950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:VDDA-power #PWR073
+L Motor_Gen2P-rescue:VDDA-power #PWR073
 U 1 1 582957E5
 P 2350 4450
 F 0 "#PWR073" H 2350 4300 50  0001 C CNN
@@ -180,7 +169,7 @@ F 3 "" H 2350 4450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:C_Small-Device C38
+L Motor_Gen2P-rescue:C_Small-Device C38
 U 1 1 58295825
 P 7800 2900
 F 0 "C38" H 7810 2970 50  0000 L CNN
@@ -191,7 +180,7 @@ F 3 "" H 7800 2900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:GNDA-power #PWR078
+L Motor_Gen2P-rescue:GNDA-power #PWR078
 U 1 1 58295866
 P 3350 4950
 F 0 "#PWR078" H 3350 4700 50  0001 C CNN
@@ -208,7 +197,7 @@ DIN
 Text HLabel 8600 3850 2    60   Input ~ 0
 CLK
 $Comp
-L Motor_Gen2-rescue:LP5912-5.0-RoMeLa_Motor U4
+L Motor_Gen2P-rescue:LP5912-5.0-RoMeLa_Motor U4
 U 1 1 5E1372AD
 P 2650 1200
 F 0 "U4" H 2650 1542 50  0000 C CNN
@@ -235,7 +224,7 @@ Wire Wire Line
 Connection ~ 2200 1100
 NoConn ~ 2950 1300
 $Comp
-L Motor_Gen2-rescue:C_Small-Device C33
+L Motor_Gen2P-rescue:C_Small-Device C33
 U 1 1 5E157014
 P 2000 1250
 F 0 "C33" H 2010 1320 50  0000 L CNN
@@ -249,7 +238,7 @@ Wire Wire Line
 	2000 1100 2000 1150
 Connection ~ 2000 1100
 $Comp
-L Motor_Gen2-rescue:C_Small-Device C34
+L Motor_Gen2P-rescue:C_Small-Device C34
 U 1 1 5E16014B
 P 3200 1250
 F 0 "C34" H 3210 1320 50  0000 L CNN
@@ -263,7 +252,7 @@ Wire Wire Line
 	3200 1100 3200 1150
 Connection ~ 3200 1100
 $Comp
-L Motor_Gen2-rescue:ADS8353-RoMeLa_Motor U7
+L Motor_Gen2P-rescue:ADS8353-RoMeLa_Motor U7
 U 1 1 5E199C16
 P 7900 3600
 F 0 "U7" H 8450 2450 60  0000 C CNN
@@ -281,40 +270,7 @@ Wire Wire Line
 Wire Wire Line
 	6550 3500 6650 3500
 $Comp
-L Motor_Gen2-rescue:OPA2320-RoMeLa_Motor U5
-U 1 1 5E1E138D
-P 5550 3500
-F 0 "U5" H 5700 3700 50  0000 C CNN
-F 1 "OPA2320" H 5800 3600 50  0000 C CNN
-F 2 "Package_SON:Texas_S-PWSON-N8_EP1.2x2mm" H 5500 3800 50  0001 C CNN
-F 3 "" H 5550 3500 50  0001 C CNN
-	1    5550 3500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Motor_Gen2-rescue:OPA2320-RoMeLa_Motor U5
-U 2 1 5E1E1B0B
-P 5550 4200
-F 0 "U5" H 5700 4400 50  0000 C CNN
-F 1 "OPA2320" H 5800 4300 50  0000 C CNN
-F 2 "Package_SON:Texas_S-PWSON-N8_EP1.2x2mm" H 5500 4500 50  0001 C CNN
-F 3 "" H 5550 4200 50  0001 C CNN
-	2    5550 4200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Motor_Gen2-rescue:OPA2320-RoMeLa_Motor U5
-U 3 1 5E1E2B44
-P 5950 2550
-F 0 "U5" H 5650 2550 50  0000 L CNN
-F 1 "OPA2320" H 5450 2450 50  0000 L CNN
-F 2 "Package_SON:Texas_S-PWSON-N8_EP1.2x2mm" H 5900 2850 50  0001 C CNN
-F 3 "" H 5950 2550 50  0001 C CNN
-	3    5950 2550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Motor_Gen2-rescue:+5V-power #PWR049
+L Motor_Gen2P-rescue:+5V-power #PWR049
 U 1 1 5E866FC1
 P 2000 1050
 F 0 "#PWR049" H 2000 900 50  0001 C CNN
@@ -329,7 +285,7 @@ Text Notes 1950 750  0    60   ~ 0
 Text Notes 3100 750  0    60   ~ 0
 5.0V
 $Comp
-L Motor_Gen2-rescue:VDDA-power #PWR059
+L Motor_Gen2P-rescue:VDDA-power #PWR059
 U 1 1 5E86CD60
 P 8100 2750
 F 0 "#PWR059" H 8100 2600 50  0001 C CNN
@@ -340,7 +296,7 @@ F 3 "" H 8100 2750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:GND-power #PWR064
+L Motor_Gen2P-rescue:GND-power #PWR064
 U 1 1 5E87F91A
 P 8500 3000
 F 0 "#PWR064" H 8500 2750 50  0001 C CNN
@@ -351,7 +307,7 @@ F 3 "" H 8500 3000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:GNDA-power #PWR074
+L Motor_Gen2P-rescue:GNDA-power #PWR074
 U 1 1 5E893AED
 P 7450 4550
 F 0 "#PWR074" H 7450 4300 50  0001 C CNN
@@ -362,7 +318,7 @@ F 3 "" H 7450 4550 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Motor_Gen2-rescue:GNDA-power #PWR070
+L Motor_Gen2P-rescue:GNDA-power #PWR070
 U 1 1 5E894001
 P 7450 3850
 F 0 "#PWR070" H 7450 3600 50  0001 C CNN
@@ -373,7 +329,7 @@ F 3 "" H 7450 3850 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Motor_Gen2-rescue:GND-power #PWR076
+L Motor_Gen2P-rescue:GND-power #PWR076
 U 1 1 5E898BA0
 P 8200 4850
 F 0 "#PWR076" H 8200 4600 50  0001 C CNN
@@ -392,7 +348,7 @@ REFA
 Text Label 7550 2150 2    60   ~ 0
 REFB
 $Comp
-L Motor_Gen2-rescue:C_Small-Device C35
+L Motor_Gen2P-rescue:C_Small-Device C35
 U 1 1 5E89E198
 P 7050 2250
 F 0 "C35" H 7060 2320 50  0000 L CNN
@@ -403,7 +359,7 @@ F 3 "" H 7050 2250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:C_Small-Device C36
+L Motor_Gen2P-rescue:C_Small-Device C36
 U 1 1 5E89E7EE
 P 7550 2250
 F 0 "C36" H 7560 2320 50  0000 L CNN
@@ -414,7 +370,7 @@ F 3 "" H 7550 2250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:GNDA-power #PWR057
+L Motor_Gen2P-rescue:GNDA-power #PWR057
 U 1 1 5E89EC68
 P 7050 2350
 F 0 "#PWR057" H 7050 2100 50  0001 C CNN
@@ -425,7 +381,7 @@ F 3 "" H 7050 2350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:GNDA-power #PWR058
+L Motor_Gen2P-rescue:GNDA-power #PWR058
 U 1 1 5E89F39E
 P 7550 2350
 F 0 "#PWR058" H 7550 2100 50  0001 C CNN
@@ -442,7 +398,7 @@ Wire Wire Line
 	7350 3500 6650 3500
 Connection ~ 6650 3500
 $Comp
-L Motor_Gen2-rescue:GNDA-power #PWR069
+L Motor_Gen2P-rescue:GNDA-power #PWR069
 U 1 1 5E8AED4E
 P 6350 3700
 F 0 "#PWR069" H 6350 3450 50  0001 C CNN
@@ -453,122 +409,33 @@ F 3 "" H 6350 3700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:C_Small-Device C43
-U 1 1 5E8B124F
-P 4900 3550
-F 0 "C43" H 4910 3620 50  0000 L CNN
-F 1 "1nF C0G" H 4910 3470 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 4900 3550 50  0001 C CNN
-F 3 "" H 4900 3550 50  0000 C CNN
-	1    4900 3550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Motor_Gen2-rescue:R_Small-Device R18
-U 1 1 5E8B1CE9
-P 4700 3400
-F 0 "R18" V 4800 3350 50  0000 L CNN
-F 1 "13k" V 4600 3300 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 4700 3400 50  0001 C CNN
-F 3 "" H 4700 3400 50  0000 C CNN
-	1    4700 3400
-	0    1    1    0   
-$EndComp
-$Comp
-L Motor_Gen2-rescue:GNDA-power #PWR068
-U 1 1 5E8B596C
-P 4900 3650
-F 0 "#PWR068" H 4900 3400 50  0001 C CNN
-F 1 "GNDA" H 4900 3500 50  0000 C CNN
-F 2 "" H 4900 3650 50  0000 C CNN
-F 3 "" H 4900 3650 50  0000 C CNN
-	1    4900 3650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Motor_Gen2-rescue:R_Small-Device R17
-U 1 1 5E8B7952
-P 4400 3400
-F 0 "R17" V 4500 3350 50  0000 L CNN
-F 1 "7.5k" V 4300 3300 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 4400 3400 50  0001 C CNN
-F 3 "" H 4400 3400 50  0000 C CNN
-	1    4400 3400
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4500 3400 4550 3400
-Wire Wire Line
-	4800 3400 4900 3400
-Wire Wire Line
-	4900 3450 4900 3400
-Connection ~ 4900 3400
-Wire Wire Line
-	4900 3400 5250 3400
-$Comp
-L Motor_Gen2-rescue:C_Small-Device C41
-U 1 1 5E8C09D5
-P 5050 3200
-F 0 "C41" V 5100 3250 50  0000 L CNN
-F 1 "1.5nF C0G" V 5000 3250 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 5050 3200 50  0001 C CNN
-F 3 "" H 5050 3200 50  0000 C CNN
-	1    5050 3200
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6350 3500 6100 3500
-Wire Wire Line
-	5150 3200 6100 3200
-Wire Wire Line
-	6100 3200 6100 3500
-Connection ~ 6100 3500
-Wire Wire Line
-	6100 3500 6000 3500
-Wire Wire Line
-	4950 3200 4550 3200
-Wire Wire Line
-	4550 3200 4550 3400
-Connection ~ 4550 3400
-Wire Wire Line
-	4550 3400 4600 3400
-Wire Wire Line
-	5250 3600 5250 3750
-Wire Wire Line
-	5250 3750 6000 3750
-Wire Wire Line
-	6000 3750 6000 3500
-Connection ~ 6000 3500
-Wire Wire Line
-	6000 3500 5850 3500
-$Comp
-L Motor_Gen2-rescue:R_Small-Device R23
+L Motor_Gen2P-rescue:R_Small-Device R23
 U 1 1 5E8DC924
 P 6450 4200
 F 0 "R23" V 6350 4200 50  0000 L CNN
-F 1 "10" V 6350 4100 50  0000 L CNN
+F 1 "33" V 6350 4100 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 6450 4200 50  0001 C CNN
 F 3 "" H 6450 4200 50  0000 C CNN
 	1    6450 4200
 	0    1    1    0   
 $EndComp
 $Comp
-L Motor_Gen2-rescue:R_Small-Device R24
+L Motor_Gen2P-rescue:R_Small-Device R24
 U 1 1 5E8DC92E
 P 6450 4400
 F 0 "R24" V 6350 4400 50  0000 L CNN
-F 1 "10" V 6350 4300 50  0000 L CNN
+F 1 "33" V 6350 4300 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 6450 4400 50  0001 C CNN
 F 3 "" H 6450 4400 50  0000 C CNN
 	1    6450 4400
 	0    1    1    0   
 $EndComp
 $Comp
-L Motor_Gen2-rescue:C_Small-Device C47
+L Motor_Gen2P-rescue:C_Small-Device C47
 U 1 1 5E8DC938
 P 6650 4300
 F 0 "C47" H 6750 4350 50  0000 L CNN
-F 1 "1.5nF C0G" H 6750 4250 50  0000 L CNN
+F 1 "1nF C0G" H 6750 4250 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 6650 4300 50  0001 C CNN
 F 3 "" H 6650 4300 50  0000 C CNN
 	1    6650 4300
@@ -585,7 +452,7 @@ Wire Wire Line
 	7350 4200 6650 4200
 Connection ~ 6650 4200
 $Comp
-L Motor_Gen2-rescue:GNDA-power #PWR072
+L Motor_Gen2P-rescue:GNDA-power #PWR072
 U 1 1 5E8DC952
 P 6350 4400
 F 0 "#PWR072" H 6350 4150 50  0001 C CNN
@@ -595,139 +462,12 @@ F 3 "" H 6350 4400 50  0000 C CNN
 	1    6350 4400
 	1    0    0    -1  
 $EndComp
-$Comp
-L Motor_Gen2-rescue:C_Small-Device C46
-U 1 1 5E8DC95C
-P 4900 4250
-F 0 "C46" H 4910 4320 50  0000 L CNN
-F 1 "1nF C0G" H 4910 4170 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 4900 4250 50  0001 C CNN
-F 3 "" H 4900 4250 50  0000 C CNN
-	1    4900 4250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Motor_Gen2-rescue:R_Small-Device R22
-U 1 1 5E8DC966
-P 4700 4100
-F 0 "R22" V 4800 4050 50  0000 L CNN
-F 1 "13k" V 4600 4000 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 4700 4100 50  0001 C CNN
-F 3 "" H 4700 4100 50  0000 C CNN
-	1    4700 4100
-	0    1    1    0   
-$EndComp
-$Comp
-L Motor_Gen2-rescue:GNDA-power #PWR071
-U 1 1 5E8DC970
-P 4900 4350
-F 0 "#PWR071" H 4900 4100 50  0001 C CNN
-F 1 "GNDA" H 4900 4200 50  0000 C CNN
-F 2 "" H 4900 4350 50  0000 C CNN
-F 3 "" H 4900 4350 50  0000 C CNN
-	1    4900 4350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Motor_Gen2-rescue:R_Small-Device R21
-U 1 1 5E8DC97A
-P 4400 4100
-F 0 "R21" V 4500 4050 50  0000 L CNN
-F 1 "7.5k" V 4300 4000 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 4400 4100 50  0001 C CNN
-F 3 "" H 4400 4100 50  0000 C CNN
-	1    4400 4100
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4500 4100 4550 4100
-Wire Wire Line
-	4800 4100 4900 4100
-Wire Wire Line
-	4900 4150 4900 4100
-Connection ~ 4900 4100
-Wire Wire Line
-	4900 4100 5250 4100
-$Comp
-L Motor_Gen2-rescue:C_Small-Device C45
-U 1 1 5E8DC989
-P 5050 3900
-F 0 "C45" V 5100 3950 50  0000 L CNN
-F 1 "1.5nF C0G" V 5000 3950 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 5050 3900 50  0001 C CNN
-F 3 "" H 5050 3900 50  0000 C CNN
-	1    5050 3900
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6350 4200 6100 4200
-Wire Wire Line
-	5150 3900 6100 3900
-Wire Wire Line
-	6100 3900 6100 4200
-Connection ~ 6100 4200
-Wire Wire Line
-	6100 4200 6000 4200
-Wire Wire Line
-	4950 3900 4550 3900
-Wire Wire Line
-	4550 3900 4550 4100
-Connection ~ 4550 4100
-Wire Wire Line
-	4550 4100 4600 4100
-Wire Wire Line
-	5250 4300 5250 4450
-Wire Wire Line
-	5250 4450 6000 4450
-Wire Wire Line
-	6000 4450 6000 4200
-Connection ~ 6000 4200
-Wire Wire Line
-	6000 4200 5850 4200
-Wire Wire Line
-	5850 2250 6100 2250
-Wire Wire Line
-	6100 2250 6100 2450
-Wire Wire Line
-	5850 2850 6100 2850
-Wire Wire Line
-	6100 2850 6100 2650
-$Comp
-L Motor_Gen2-rescue:VDDA-power #PWR056
-U 1 1 5E8EEA12
-P 5850 2250
-F 0 "#PWR056" H 5850 2100 50  0001 C CNN
-F 1 "VDDA" H 5850 2400 50  0000 C CNN
-F 2 "" H 5850 2250 50  0000 C CNN
-F 3 "" H 5850 2250 50  0000 C CNN
-	1    5850 2250
-	1    0    0    -1  
-$EndComp
-Connection ~ 5850 2250
-$Comp
-L Motor_Gen2-rescue:GNDA-power #PWR061
-U 1 1 5E8EEDD3
-P 5850 2850
-F 0 "#PWR061" H 5850 2600 50  0001 C CNN
-F 1 "GNDA" H 5850 2700 50  0000 C CNN
-F 2 "" H 5850 2850 50  0000 C CNN
-F 3 "" H 5850 2850 50  0000 C CNN
-	1    5850 2850
-	1    0    0    -1  
-$EndComp
-Connection ~ 5850 2850
 Wire Wire Line
 	3300 4500 4150 4500
 Wire Wire Line
-	4150 4500 4150 4100
-Wire Wire Line
-	4150 4100 4300 4100
+	4150 4500 4150 4200
 Wire Wire Line
 	3300 3000 4150 3000
-Wire Wire Line
-	4150 3000 4150 3400
-Wire Wire Line
-	4150 3400 4300 3400
 Wire Wire Line
 	2350 2950 2350 3000
 Wire Wire Line
@@ -737,7 +477,7 @@ Wire Wire Line
 Wire Wire Line
 	2350 4500 2500 4500
 $Comp
-L Motor_Gen2-rescue:C_Small-Device C40
+L Motor_Gen2P-rescue:C_Small-Device C40
 U 1 1 5E930714
 P 2350 3150
 F 0 "C40" H 2360 3220 50  0000 L CNN
@@ -748,7 +488,7 @@ F 3 "" H 2350 3150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:C_Small-Device C48
+L Motor_Gen2P-rescue:C_Small-Device C48
 U 1 1 5E930CC3
 P 2350 4650
 F 0 "C48" H 2360 4720 50  0000 L CNN
@@ -765,7 +505,7 @@ Wire Wire Line
 	2350 3050 2350 3000
 Connection ~ 2350 3000
 $Comp
-L Motor_Gen2-rescue:GNDA-power #PWR065
+L Motor_Gen2P-rescue:GNDA-power #PWR065
 U 1 1 5E938E7E
 P 2350 3250
 F 0 "#PWR065" H 2350 3000 50  0001 C CNN
@@ -776,7 +516,7 @@ F 3 "" H 2350 3250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:GNDA-power #PWR075
+L Motor_Gen2P-rescue:GNDA-power #PWR075
 U 1 1 5E939220
 P 2350 4750
 F 0 "#PWR075" H 2350 4500 50  0001 C CNN
@@ -810,7 +550,7 @@ Wire Wire Line
 Connection ~ 3350 4650
 Connection ~ 3350 3250
 $Comp
-L Motor_Gen2-rescue:C_Small-Device C49
+L Motor_Gen2P-rescue:C_Small-Device C49
 U 1 1 582957EB
 P 3350 4850
 F 0 "C49" H 3360 4920 50  0000 L CNN
@@ -822,12 +562,12 @@ F 3 "" H 3350 4850 50  0000 C CNN
 $EndComp
 Connection ~ 3350 4750
 $Comp
-L Motor_Gen2-rescue:R_Small-Device R16
+L Motor_Gen2P-rescue:R_Small-Device R16
 U 1 1 5E9751F9
 P 1300 1250
 F 0 "R16" V 1400 1200 50  0000 L CNN
 F 1 "0" V 1200 1150 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 1300 1250 50  0001 C CNN
+F 2 "NetTie:NetTie-2_SMD_Pad0.5mm" H 1300 1250 50  0001 C CNN
 F 3 "" H 1300 1250 50  0000 C CNN
 	1    1300 1250
 	0    1    1    0   
@@ -844,7 +584,7 @@ Wire Wire Line
 	7800 2750 8100 2750
 Connection ~ 8100 2750
 $Comp
-L Motor_Gen2-rescue:GND-power #PWR063
+L Motor_Gen2P-rescue:GND-power #PWR063
 U 1 1 5E98278E
 P 7800 3000
 F 0 "#PWR063" H 7800 2750 50  0001 C CNN
@@ -855,7 +595,7 @@ F 3 "" H 7800 3000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:+3.3V-power #PWR060
+L Motor_Gen2P-rescue:+3.3V-power #PWR060
 U 1 1 5E983171
 P 8500 2750
 F 0 "#PWR060" H 8500 2600 50  0001 C CNN
@@ -876,6 +616,8 @@ $Comp
 L Motor_Gen2-rescue:INA240-RoMeLa_Motor U8
 U 1 1 5E193697
 P 2900 4550
+AR Path="/5E193697" Ref="U8"  Part="1" 
+AR Path="/5828F3AC/5E193697" Ref="U8"  Part="1" 
 F 0 "U8" H 3350 4850 50  0000 R CNN
 F 1 "INA240" H 3500 4750 50  0000 R CNN
 F 2 "Package_SO:TSSOP-8_4.4x3mm_P0.65mm" H 3100 4200 50  0001 L CNN
@@ -887,6 +629,8 @@ $Comp
 L Motor_Gen2-rescue:INA240-RoMeLa_Motor U6
 U 1 1 5E18A03E
 P 2900 3050
+AR Path="/5E18A03E" Ref="U6"  Part="1" 
+AR Path="/5828F3AC/5E18A03E" Ref="U6"  Part="1" 
 F 0 "U6" H 3350 3350 50  0000 R CNN
 F 1 "INA240" H 3500 3250 50  0000 R CNN
 F 2 "Package_SO:TSSOP-8_4.4x3mm_P0.65mm" H 3100 2700 50  0001 L CNN
@@ -895,7 +639,7 @@ F 3 "" H 3550 2350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:GNDA-power #PWR0122
+L Motor_Gen2P-rescue:GNDA-power #PWR0122
 U 1 1 5E2DBD86
 P 2000 1350
 F 0 "#PWR0122" H 2000 1100 50  0001 C CNN
@@ -906,7 +650,7 @@ F 3 "" H 2000 1350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:GNDA-power #PWR0123
+L Motor_Gen2P-rescue:GNDA-power #PWR0123
 U 1 1 5E2DC884
 P 2650 1500
 F 0 "#PWR0123" H 2650 1250 50  0001 C CNN
@@ -917,7 +661,7 @@ F 3 "" H 2650 1500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Motor_Gen2-rescue:GNDA-power #PWR0124
+L Motor_Gen2P-rescue:GNDA-power #PWR0124
 U 1 1 5E2DCB96
 P 3200 1350
 F 0 "#PWR0124" H 3200 1100 50  0001 C CNN
@@ -927,4 +671,12 @@ F 3 "" H 3200 1350 50  0000 C CNN
 	1    3200 1350
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4150 3500 6350 3500
+Wire Wire Line
+	4150 4200 6350 4200
+Wire Wire Line
+	4150 3000 4150 3500
+Text Notes 5150 3150 0    50   ~ 0
+Changed to direct drive \nfor space saving.
 $EndSCHEMATC

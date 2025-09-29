@@ -1,0 +1,495 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 5
+Title "RoMeLa Motor Gen2 Logic Board"
+Date "10/27/2022"
+Rev "1.0"
+Comp "Robotics & Mechanisms Labratory(RoMeLa) UCLA"
+Comment1 "Author: Tym Zhu"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 4450 1900 1550 3350
+U 5827F7AC
+F0 "stm32" 60
+F1 "stm32.sch" 60
+F2 "ENGATE" O R 6000 2150 60 
+F3 "H1" O R 6000 2300 60 
+F4 "H2" O R 6000 2400 60 
+F5 "H3" O R 6000 2500 60 
+F6 "DRV8305_SCS" O R 6000 2700 60 
+F7 "DRV8305_SCLK" O R 6000 2800 60 
+F8 "DRV8305_MOSI" O R 6000 2900 60 
+F9 "DRV8305_MISO" I R 6000 3000 60 
+F10 "FAULT" I R 6000 3150 60 
+F11 "PVDDSENSE" I R 6000 3400 60 
+F12 "ADC_SDO" O R 6000 4100 60 
+F13 "ADC_SDI" I R 6000 4200 60 
+F14 "ADC_CLK" O R 6000 4300 60 
+F15 "ENC_CSn" O L 4450 3150 60 
+F16 "ENC_SCL" O L 4450 3250 60 
+F17 "ENC_MISO" I L 4450 3350 60 
+F18 "ENC_MOSI" O L 4450 3450 60 
+F19 "485_RX" I L 4450 2350 60 
+F20 "485_TXEN" O L 4450 2500 60 
+F21 "485_TX" O L 4450 2650 60 
+F22 "TC_nCS" O L 4450 4100 60 
+F23 "TC_SCK" O L 4450 4200 60 
+F24 "TC_SO" I L 4450 4300 60 
+F25 "I2C_SDA" B R 6000 4650 60 
+F26 "I2C_SCL" O R 6000 4750 60 
+F27 "ADC_CS" O R 6000 4400 60 
+F28 "EXT_DI" I L 4450 2200 60 
+F29 "DRV_ENABLE" O R 6000 2050 60 
+$EndSheet
+$Sheet
+S 2950 4000 1000 900 
+U 5829AC99
+F0 "Thermal" 60
+F1 "Thermal.sch" 60
+F2 "T+" I L 2950 4200 60 
+F3 "T-" I L 2950 4350 60 
+F4 "TC_nCS" I R 3950 4100 60 
+F5 "TC_SCK" I R 3950 4200 60 
+F6 "TC_SO" O R 3950 4300 60 
+$EndSheet
+$Sheet
+S 2950 3000 1000 700 
+U 5829B004
+F0 "Encoder" 60
+F1 "Encoder.sch" 60
+F2 "CSn" I R 3950 3150 60 
+F3 "CLK" I R 3950 3250 60 
+F4 "MISO" O R 3950 3350 60 
+F5 "MOSI" I R 3950 3450 60 
+F6 "BATT+" I L 2950 3250 60 
+F7 "BATT-" I L 2950 3550 60 
+$EndSheet
+$Comp
+L Motor_Gen2L-rescue:R_Small-Device R1
+U 1 1 58299209
+P 2400 1650
+F 0 "R1" V 2300 1500 50  0000 L CNN
+F 1 "120*" V 2300 1650 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2400 1650 50  0001 C CNN
+F 3 "" H 2400 1650 50  0000 C CNN
+	1    2400 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L Motor_Gen2L-rescue:GNDREF-power #PWR03
+U 1 1 5829962A
+P 2600 1650
+F 0 "#PWR03" H 2600 1400 50  0001 C CNN
+F 1 "GNDREF" H 2600 1500 50  0000 C CNN
+F 2 "" H 2600 1650 50  0000 C CNN
+F 3 "" H 2600 1650 50  0000 C CNN
+	1    2600 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor_Gen2L-rescue:Conn_01x02-Connector_Generic P6
+U 1 1 582AC713
+P 2100 4300
+F 0 "P6" H 2100 4450 50  0000 C CNN
+F 1 "CONN_TC" V 2200 4300 50  0000 C CNN
+F 2 "RoMeLa_Motor:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal" H 2100 4300 50  0001 C CNN
+F 3 "" H 2100 4300 50  0000 C CNN
+	1    2100 4300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6000 2150 6200 2150
+Wire Wire Line
+	6000 2300 6200 2300
+Wire Wire Line
+	6200 2400 6000 2400
+Wire Wire Line
+	6000 2500 6200 2500
+Wire Wire Line
+	6200 2700 6000 2700
+Wire Wire Line
+	6000 2800 6200 2800
+Wire Wire Line
+	6200 2900 6000 2900
+Wire Wire Line
+	6000 3000 6200 3000
+Wire Wire Line
+	6000 3150 6200 3150
+Wire Wire Line
+	6000 3400 6200 3400
+Wire Wire Line
+	6200 4400 6000 4400
+Wire Wire Line
+	3950 3150 4450 3150
+Wire Wire Line
+	4450 3250 3950 3250
+Wire Wire Line
+	3950 3350 4450 3350
+Wire Wire Line
+	4450 3450 3950 3450
+Wire Wire Line
+	2500 1650 2600 1650
+Wire Wire Line
+	3950 2650 4450 2650
+Wire Wire Line
+	4450 2500 3950 2500
+Wire Wire Line
+	3950 2350 4450 2350
+Wire Wire Line
+	2300 4200 2950 4200
+Wire Wire Line
+	2950 4350 2300 4350
+Wire Wire Line
+	2300 4350 2300 4300
+Wire Wire Line
+	3950 4300 4450 4300
+Wire Wire Line
+	4450 4200 3950 4200
+Wire Wire Line
+	3950 4100 4450 4100
+Wire Wire Line
+	6000 4200 6200 4200
+Wire Wire Line
+	3950 2200 4450 2200
+$Comp
+L Motor_Gen2L-rescue:Conn_01x06-Connector_Generic P2
+U 1 1 5EA13651
+P 1450 2550
+F 0 "P2" H 1600 2250 50  0000 C CNN
+F 1 "PicoBlade 6P" H 1600 2850 50  0000 C CNN
+F 2 "RoMeLa_Motor:Molex_PicoBlade_53048-0650_1x06_P1.25mm_Horizontal" H 1450 2550 50  0001 C CNN
+F 3 "~" H 1450 2550 50  0001 C CNN
+	1    1450 2550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Motor_Gen2L-rescue:Conn_01x06-Connector_Generic P1
+U 1 1 5EA1E3F2
+P 1450 1850
+F 0 "P1" H 1600 1550 50  0000 C CNN
+F 1 "PicoBlade 6P" H 1600 2150 50  0000 C CNN
+F 2 "RoMeLa_Motor:Molex_PicoBlade_53048-0650_1x06_P1.25mm_Horizontal" H 1450 1850 50  0001 C CNN
+F 3 "~" H 1450 1850 50  0001 C CNN
+	1    1450 1850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 2550 2050 2550
+Wire Wire Line
+	1650 1850 2050 1850
+Wire Wire Line
+	2050 1850 2050 2550
+Wire Wire Line
+	1650 1650 2250 1650
+Wire Wire Line
+	2250 2350 2250 1650
+Wire Wire Line
+	1650 2350 2250 2350
+Connection ~ 2250 1650
+Wire Wire Line
+	2250 1650 2300 1650
+Wire Wire Line
+	1650 1750 2150 1750
+Wire Wire Line
+	2150 1750 2150 2450
+Wire Wire Line
+	2150 2450 1650 2450
+Wire Wire Line
+	1650 1950 1950 1950
+Wire Wire Line
+	1950 1950 1950 2650
+Wire Wire Line
+	1950 2650 1650 2650
+Connection ~ 1950 2650
+Wire Wire Line
+	1650 2050 1850 2050
+Wire Wire Line
+	1850 2050 1850 2750
+Wire Wire Line
+	1850 2750 1650 2750
+Wire Wire Line
+	1650 2150 1750 2150
+Wire Wire Line
+	1750 2150 1750 2850
+Wire Wire Line
+	1750 2850 1650 2850
+$Sheet
+S 2950 2050 1000 700 
+U 5829ADB5
+F0 "RS485" 60
+F1 "RS485.sch" 60
+F2 "RxD" O R 3950 2350 60 
+F3 "DE/nRE" I R 3950 2500 60 
+F4 "TxD" I R 3950 2650 60 
+F5 "A" B L 2950 2550 60 
+F6 "B" B L 2950 2650 60 
+F7 "ISO_DI" I L 2950 2200 60 
+F8 "EXT_DI" O R 3950 2200 60 
+$EndSheet
+Wire Wire Line
+	1950 2650 2950 2650
+Connection ~ 2050 2550
+Wire Wire Line
+	2150 2450 2750 2450
+Wire Wire Line
+	2750 2450 2750 2200
+Wire Wire Line
+	2750 2200 2950 2200
+Connection ~ 2150 2450
+$Comp
+L Motor_Gen2L-rescue:Conn_01x02-Connector_Generic P5
+U 1 1 5EA52F07
+P 1450 3550
+F 0 "P5" H 1450 3700 50  0000 C CNN
+F 1 "CONN_BATT" H 1550 3300 50  0000 C CNN
+F 2 "RoMeLa_Motor:Molex_PicoBlade_53048-0210_1x02_P1.25mm_Horizontal" H 1450 3550 50  0001 C CNN
+F 3 "" H 1450 3550 50  0000 C CNN
+	1    1450 3550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2250 3250 2950 3250
+Wire Wire Line
+	1650 3450 1800 3450
+Wire Wire Line
+	1800 3450 1800 3250
+Wire Wire Line
+	1800 3250 2250 3250
+Connection ~ 2250 3250
+$Comp
+L Motor_Gen2L-rescue:MountingHole_Pad-Mechanical H1
+U 1 1 5E0FA87A
+P 2050 5600
+F 0 "H1" H 2150 5649 50  0000 L CNN
+F 1 "MT" H 2150 5558 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 2050 5600 50  0001 C CNN
+F 3 "~" H 2050 5600 50  0001 C CNN
+	1    2050 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor_Gen2L-rescue:MountingHole_Pad-Mechanical H2
+U 1 1 5E2E12CF
+P 2350 5600
+F 0 "H2" H 2450 5649 50  0000 L CNN
+F 1 "MT" H 2450 5558 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 2350 5600 50  0001 C CNN
+F 3 "~" H 2350 5600 50  0001 C CNN
+	1    2350 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor_Gen2L-rescue:MountingHole_Pad-Mechanical H3
+U 1 1 5E2E15B2
+P 2650 5600
+F 0 "H3" H 2750 5649 50  0000 L CNN
+F 1 "MT" H 2750 5558 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 2650 5600 50  0001 C CNN
+F 3 "~" H 2650 5600 50  0001 C CNN
+	1    2650 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor_Gen2L-rescue:MountingHole_Pad-Mechanical H4
+U 1 1 5E2E1805
+P 2950 5600
+F 0 "H4" H 3050 5649 50  0000 L CNN
+F 1 "MT" H 3050 5558 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 2950 5600 50  0001 C CNN
+F 3 "~" H 2950 5600 50  0001 C CNN
+	1    2950 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor_Gen2L-rescue:+BATT-power #PWR0119
+U 1 1 5E22C2C9
+P 2250 3250
+F 0 "#PWR0119" H 2250 3100 50  0001 C CNN
+F 1 "+BATT" H 2265 3423 50  0000 C CNN
+F 2 "" H 2250 3250 50  0001 C CNN
+F 3 "" H 2250 3250 50  0001 C CNN
+	1    2250 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 2050 6200 2050
+Text Notes 1050 1450 0    60   ~ 0
+Molex 0530480650
+Text Label 8900 2250 2    60   ~ 0
+PVDDSENSE
+Text Label 8900 2450 2    60   ~ 0
+FAULT
+Text Label 8900 2650 2    60   ~ 0
+SDO
+Text Label 8900 2550 2    60   ~ 0
+I2C_SCL
+Text Label 8900 2850 2    60   ~ 0
+SDI
+Text Label 8900 2750 2    60   ~ 0
+I2C_SDA
+Text Label 8900 3050 2    60   ~ 0
+SCLK
+Text Label 8900 2950 2    60   ~ 0
+DOUT
+Text Label 8900 3250 2    60   ~ 0
+SCS
+Text Label 8900 3150 2    60   ~ 0
+CLK
+Text Label 8900 3450 2    60   ~ 0
+DRV_ENABLE
+Text Label 8900 3350 2    60   ~ 0
+~CS
+Text Label 8900 3650 2    60   ~ 0
+H1
+Text Label 8900 3550 2    60   ~ 0
+DIN
+Text Label 8900 3850 2    60   ~ 0
+H2
+Text Label 8900 4050 2    60   ~ 0
+H3
+Text Label 8900 4250 2    60   ~ 0
+ENGATE
+$Comp
+L Motor_Gen2L-rescue:GND-power #PWR0113
+U 1 1 6353F905
+P 8650 3950
+F 0 "#PWR0113" H 8650 3700 50  0001 C CNN
+F 1 "GND" H 8550 3950 50  0000 C CNN
+F 2 "" H 8650 3950 50  0001 C CNN
+F 3 "" H 8650 3950 50  0001 C CNN
+	1    8650 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor_Gen2L-rescue:+3.3V-power #PWR0116
+U 1 1 6354067E
+P 8400 4150
+F 0 "#PWR0116" H 8400 4000 50  0001 C CNN
+F 1 "+3.3V" H 8250 4200 50  0000 C CNN
+F 2 "" H 8400 4150 50  0001 C CNN
+F 3 "" H 8400 4150 50  0001 C CNN
+	1    8400 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 3950 8900 3950
+Wire Wire Line
+	8900 4150 8400 4150
+Text Label 6200 3400 0    60   ~ 0
+PVDDSENSE
+Text Label 6200 3150 0    60   ~ 0
+FAULT
+Text Label 6200 3000 0    60   ~ 0
+SDO
+Text Label 6200 4750 0    60   ~ 0
+I2C_SCL
+Text Label 6200 2900 0    60   ~ 0
+SDI
+Text Label 6200 4650 0    60   ~ 0
+I2C_SDA
+Text Label 6200 2800 0    60   ~ 0
+SCLK
+Text Label 6200 4200 0    60   ~ 0
+DOUT
+Text Label 6200 2700 0    60   ~ 0
+SCS
+Text Label 6200 4300 0    60   ~ 0
+CLK
+Text Label 6200 2050 0    60   ~ 0
+DRV_ENABLE
+Text Label 6200 4400 0    60   ~ 0
+~CS
+Text Label 6200 2300 0    60   ~ 0
+H1
+Text Label 6200 4100 0    60   ~ 0
+DIN
+Text Label 6200 2400 0    60   ~ 0
+H2
+Text Label 6200 2500 0    60   ~ 0
+H3
+Text Label 6200 2150 0    60   ~ 0
+ENGATE
+Wire Wire Line
+	6000 4300 6200 4300
+Wire Wire Line
+	6200 4100 6000 4100
+Wire Wire Line
+	6200 4650 6000 4650
+Wire Wire Line
+	6000 4750 6200 4750
+Wire Wire Line
+	2050 2550 2950 2550
+Wire Wire Line
+	1300 3550 1650 3550
+Connection ~ 1650 3550
+$Comp
+L Motor_Gen2L-rescue:Conn_01x02-Connector_Generic P4
+U 1 1 6352AF3C
+P 1100 3550
+F 0 "P4" H 1100 3700 50  0000 C CNN
+F 1 "CONN_BATT" V 1200 3550 50  0001 C CNN
+F 2 "RoMeLa_Motor:Molex_PicoBlade_53048-0210_1x02_P1.25mm_Horizontal" H 1100 3550 50  0001 C CNN
+F 3 "" H 1100 3550 50  0000 C CNN
+	1    1100 3550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1300 3450 1650 3450
+Connection ~ 1650 3450
+$Comp
+L Motor_Gen2L-rescue:+5V-power #PWR0123
+U 1 1 6350A6FE
+P 8400 3750
+F 0 "#PWR0123" H 8400 3600 50  0001 C CNN
+F 1 "+5V" H 8300 3850 50  0000 C CNN
+F 2 "" H 8400 3750 50  0001 C CNN
+F 3 "" H 8400 3750 50  0001 C CNN
+	1    8400 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 3750 8900 3750
+Text Notes 8950 1950 0    60   ~ 12
+Flipped!
+$Comp
+L Motor_Gen2L-rescue:Conn_01x21-Connector_Generic J1
+U 1 1 6353A63A
+P 9100 3250
+F 0 "J1" H 9050 4450 50  0000 L CNN
+F 1 "Conn_01x21" H 9050 4350 50  0000 L CNN
+F 2 "RoMeLa_Motor:Molex_5019122190_2Rows-21Pins_P0.30mm" H 9100 3250 50  0001 C CNN
+F 3 "~" H 9100 3250 50  0001 C CNN
+	1    9100 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 3550 2950 3550
+$Comp
+L Motor_Gen2L-rescue:LOGO_Small-RoMeLa_Motor G1
+U 1 1 637CAC54
+P 1100 6700
+F 0 "G1" H 1100 6840 50  0001 C CNN
+F 1 "ARTEMIS" H 1230 6713 50  0000 L CNN
+F 2 "RoMeLa_Motor:artemis_logo_small" H 1100 6525 50  0001 C CNN
+F 3 "~" H 1130 6500 50  0001 C CNN
+	1    1100 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Motor_Gen2L-rescue:LOGO_Small-RoMeLa_Motor G2
+U 1 1 637CE27F
+P 1100 7000
+F 0 "G2" H 1100 7140 50  0001 C CNN
+F 1 "RoMeLa" H 1230 7013 50  0000 L CNN
+F 2 "RoMeLa_Motor:LOGO" H 1100 6825 50  0001 C CNN
+F 3 "~" H 1130 6800 50  0001 C CNN
+	1    1100 7000
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

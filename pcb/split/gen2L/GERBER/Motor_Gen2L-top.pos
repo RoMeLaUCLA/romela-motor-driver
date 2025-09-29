@@ -1,0 +1,29 @@
+### Module positions - created on 10/27/22 19:37:49 ###
+### Printed by Pcbnew version kicad (5.1.10)-1
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val           Package                                                PosX       PosY       Rot  Side
+C5        104           C_0402_1005Metric                                    9.7000     3.8000  180.0000  top
+C7        104           C_0402_1005Metric                                    7.9000     3.8000    0.0000  top
+C65       104           C_0402_1005Metric                                  -15.7250    -8.7000  180.0000  top
+D1        LED_Red       LED_0603_1608Metric                                 21.2750   -11.0734  180.0000  top
+D2        LED_Green     LED_0603_1608Metric                                 21.2750   -12.5734  180.0000  top
+D3        LED_Blue      LED_0603_1608Metric                                 21.2750   -14.0734  180.0000  top
+D5        ESDCAN02      SOT-323_SC-70                                      -12.7000   -14.6000  180.0000  top
+G1        ARTEMIS       artemis_logo_small                                 -17.1000    -3.8000    0.0000  top
+G2        RoMeLa        LOGO                                                21.8750    -4.9250   90.0000  top
+J1        Conn_01x21    Molex_5019122190_2Rows-21Pins_P0.30mm                8.7500    -5.8250  270.0000  top
+J2        Port_MU       FFC_8POS_0.5mm_BackFlip                             -1.7500    -6.0000    0.0000  top
+P6        CONN_TC       JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal   -12.0000     3.5000   90.0000  top
+P7        Port_SW       JST_SH_BM06B-SRSS-TB_1x06-1MP_P1.00mm_Vertical       0.0000    -0.1000   90.0000  top
+P8        CONN_01X04    JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical      12.7000   -12.8000  180.0000  top
+P9        Port_Encoder  FFC_8POS_0.5mm_BackFlip                             14.7000    -6.6500   90.0000  top
+P10       Port_Encoder  JST_SH_BM06B-SRSS-TB_1x06-1MP_P1.00mm_Vertical      -5.8000   -11.5000   90.0000  top
+R1        120*          R_0603_1608Metric                                  -15.8000   -15.3000  180.0000  top
+R32       10*           R_0603_1608Metric                                  -12.5000   -11.3000  180.0000  top
+R33       10*           R_0603_1608Metric                                  -12.5000   -12.6000  180.0000  top
+R34       75k           R_0402_1005Metric                                  -12.1000   -10.2000    0.0000  top
+R35       3.9k          R_0402_1005Metric                                  -12.1000    -9.3000    0.0000  top
+U15       MAX14775E     SOIC-8_3.9x4.9mm_P1.27mm                           -17.7000   -11.9000    0.0000  top
+Y1        Resonator     Resonator_3.2x1.3                                    5.0000     3.7000    0.0000  top
+## End

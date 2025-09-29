@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name RoMeLa_Motor)(type Legacy)(uri ${KIPRJMOD}/../RoMeLa_Motor.lib)(options "")(descr ""))
+  (lib (name Motor_Gen2-rescue)(type Legacy)(uri ${KIPRJMOD}/Motor_Gen2-rescue.lib)(options "")(descr ""))
+  (lib (name Motor_Gen2P-rescue)(type Legacy)(uri ${KIPRJMOD}/Motor_Gen2P-rescue.lib)(options "")(descr ""))
+)
