@@ -5,6 +5,11 @@
  
  <img src="/docs/driver_diagram.svg" width="500">
 
+
+ # System Diagram
+
+ <img src="/docs/system_diagram.svg" width="600">
+ 
  # PCB reference
 
 <img src="/docs/driver_gen2.jpg" width="400">
