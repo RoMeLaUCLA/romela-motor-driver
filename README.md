@@ -6,7 +6,7 @@
  <img src="/docs/driver_diagram.svg" width="500">
 
 
- # System Diagram
+ ## System Diagram
 
  <img src="/docs/system_diagram.svg" width="600">
  
