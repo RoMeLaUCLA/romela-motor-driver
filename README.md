@@ -1,4 +1,4 @@
-# BEAR-driver-gen2
+# RoMeLa motor driver gen2
  Motor driver PCB and firmware designed for RoMeLa actuators. 
  
 
