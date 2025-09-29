@@ -3,7 +3,7 @@
  
  Block diagram of the hardware:
  
- <img src="/docs/driver_diagram.jpg" width="400">
+ <img src="/docs/driver_diagram.svg" width="500">
 
  # PCB reference
 
