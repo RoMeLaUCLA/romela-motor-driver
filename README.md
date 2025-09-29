@@ -10,9 +10,9 @@
 
 <img src="/docs/driver_gen2_U180.jpg" width="400">
 
-[Link to gen2L schematics](/pcb/split/schematics_Motor_Gen2L.pdf)
+[Link to gen2L schematics](/pcb/split/gen2L/schematics_Motor_Gen2L.pdf)
 
-[Link to gen2P schematics](/pcb/split/schematics_Motor_Gen2P.pdf)
+[Link to gen2P schematics](/pcb/split/gen2P/schematics_Motor_Gen2P.pdf)
 
 # Change Log
 12/1/2022 Ver. 581
